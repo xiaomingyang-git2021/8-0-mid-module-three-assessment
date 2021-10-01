@@ -1,32 +1,44 @@
-[![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
+# Module Three Mid-module Assessment
 
-# Module Three Mid Module Assessment: Garage Sale App
+In this assessment, you will build an application where users can add products to their cart and "purchase" them through a form.
 
-## Getting Started
+## Assessment Setup
 
-- Fork this repo
-- Clone the forked repository
-- `cd` to the directory where you cloned it
-- `npm install` to install dependencies
-- `npm run cypress` to open the cypress testing window
+### Getting started
 
-> _Note_: Remember to `git add`, `git commit` and `git push` regularly
+1. Fork and clone this repository.
 
-## Submission Guidelines
+1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
 
-- When finished, commit and push your work.
-- Make a pull request on github.
-- Submit the link to your pull request on Canvas.
+   ```
+   npm install
+   ```
 
-## Assessment Details
+   This will install the libraries needed to run the tests.
 
-Create a garage sale app that meets the user stories below.
+1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
 
-**The products for the store are in the array in `data/productData.js`. Import this and pass it to your components. Use these products and do not change any information in the array, or else the tests will fail.**
+### Tests
+
+To run the tests, you can run the following command from the command line. You will need to be in the root directory of your local directory.
+
+```
+npm run cypress
+```
+
+This will open the Cypress testing window, where you can click to run an individual suite of tests or all of the tests at once.
+
+## Instructions
+
+Your goal is to build a working application where users can:
+
+- Add items to the cart.
+- Enter information into the checkout form.
+- Complete the transaction.
 
 ![demo gif](./garage-sale-gif-demo.gif)
 
-## User Stories
+### User stories
 
 1. I can see sections with products, shopping cart, and checkout form.
 1. I can see each product's name, price, photo, description, and an `Add To Cart` button.
@@ -34,19 +46,19 @@ Create a garage sale app that meets the user stories below.
 1. I can submit the checkout form, complete my purchase, and see a confirmation alert with the total cost.
 1. If I do not complete the checkout form with valid data, I will see an alert that tells me my data is not valid.
 
-## Acceptance criteria and tests
+### Acceptance criteria and tests
 
 The acceptance criteria below are covered by unit tests. Notice that there are some important details about the exact text, classes, or HTML tags you'll need to use in order to pass the tests.
 
-### **`layout.test.js`**: `I can see sections with...`
+#### Layout
 
 - I can see a section with products laid out in a grid.
-  - Use the class name `Products` with css grid and `grid-template-columns`
+  - Use the class name `.products` with css grid and `grid-template-columns`
 - I can see a `Cart` section that has `Subtotal`, `Tax`, and `Total`
-- I can see a `Checkout` section that has inputs _and labels_ for `First Name`, `Last Name`, `Email`, `Credit Card`, `Zip Code`, and a button that says `Buy Now`
+- I can see a `Checkout` section that has an ID of `#checkout` and has inputs _and labels_ for `First Name`, `Last Name`, `Email`, `Credit Card`, `Zip Code`, and a button that says `Buy Now`
   - Don't forget to create `<label>` elements for your inputs
 
-### **`product.test.js`**: `I can see each product's name...`
+#### Product
 
 - Each product displays the name, photo, and description.
 - Each product displays a price formatted in dollars and cents.
@@ -54,7 +66,7 @@ The acceptance criteria below are covered by unit tests. Notice that there are s
 - Each product has an `Add To Cart` button.
   - The button text should be: `Add To Cart`
 
-### **`addToCart.test.js`**: `I can add products to my cart...`
+#### Add to cart
 
 - When I click on a product, its name appears in the cart.
 - When I click on a product, its formatted price appears in the cart.
@@ -69,7 +81,7 @@ The acceptance criteria below are covered by unit tests. Notice that there are s
 - When I click on additional products, the other items in the cart do not change.
 - When I click on additional products, the subtotal, tax, and total update as expected.
 
-### **`checkout.test.js`**: `I can submit the checkout form...`
+#### Checkout
 
 - I can complete the inputs in the checkout form.
 - When I complete the form with valid input and click `Buy Now`, an alert tells me the purchase was successful.
