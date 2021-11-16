@@ -6,6 +6,6 @@
     "testCaseSwitchClassnameAndName": true
   },
   "cypress-watch-and-reload": {
-    "watch": "*"
+    "watch": "src/**/*.js"
   }
 }
