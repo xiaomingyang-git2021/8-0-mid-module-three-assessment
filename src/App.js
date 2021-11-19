@@ -1,7 +1,10 @@
 import "./App.css";
+import Products from "./components/Products";
 
 const App = () => {
-  return <h1>Hello, world!</h1>;
+  return (
+    <Products />
+  )
 };
 
 export default App;
